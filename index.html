@@ -132,7 +132,7 @@
       text-align: center;
     }
     .mike-tyson img {
-      max-width: 100px;
+      max-width: 150px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -161,7 +161,7 @@
 </head>
 <body>
   <header>
-    <img src="gd8-logo.png" alt="GD8 Logo" class="logo">
+    <img src="/mnt/data/beb1b45d681868f58d5cb.png" alt="GD8 Logo" class="logo">
     <h1>How to Claim Free Chips in Australia</h1>
     <p>No deposit, no worries. Just follow the steps and enjoy up to $58.88 in free play.</p>
   </header>
@@ -194,8 +194,22 @@
     </div>
   </section>
 
-  <div class="mike-tyson">
-    <img src="https://static.gwvkyk.com/media/62f36f5e53286ce0c6e57.png" alt="Mike Tyson" style="max-width:80px">
+  <button onclick="toggleTyson()" style="
+    position: fixed;
+    left: 10px;
+    bottom: 180px;
+    z-index: 999;
+    background: #e94057;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+  ">👀 Hide Tyson</button>
+
+  <div class="mike-tyson" id="tyson-block">
+    <img src="https://static.gwvkyk.com/media/62f36f5e53286ce0c6e57.png" alt="Mike Tyson" style="max-width: 100px; margin-top: 4px;">
   </div>
 
   <div class="contact-floating">
@@ -203,5 +217,16 @@
     <a href="https://t.me/yourchannel" target="_blank" class="telegram" title="Telegram"><span>✈️</span></a>
     <a href="https://yourlivechat.url" target="_blank" class="livechat" title="Live Chat"><span>💬</span></a>
   </div>
+
+  <script>
+    let tysonVisible = true;
+    function toggleTyson() {
+      const el = document.getElementById('tyson-block');
+      const btn = event.target;
+      tysonVisible = !tysonVisible;
+      el.style.display = tysonVisible ? 'block' : 'none';
+      btn.innerText = tysonVisible ? '👀 Hide Tyson' : '👋 Show Tyson';
+    }
+  </script>
 </body>
 </html>
